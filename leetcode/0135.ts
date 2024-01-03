@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/candy/
 function candy(ratings: number[]): number {
     const results = new Array(ratings.length).fill(1)
     for (let i = 1; i < ratings.length; i++) {
