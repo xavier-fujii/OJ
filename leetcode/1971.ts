@@ -3,7 +3,6 @@
 type Coll = Map<number, Set<number> | undefined>
 
 function validPath(n: number, edges: number[][], source: number, destination: number): boolean {
-    if (source === destination) return true
     const collections: Coll = new Map()
     for (const [n1, n2] of edges) {
         let n1Neighbors = collections.get(n1)
@@ -24,6 +23,7 @@ function validPath(n: number, edges: number[][], source: number, destination: nu
 }
 
 function search(col: Coll, source: number, destination: number) {
+    if (source === destination) return true
     let result = false
     let reached = new Set<number>()
 
